@@ -1,15 +1,7 @@
-# Note
-
-I haven't updated this package in a long time except merging PRs. The last time I was using this package was with PHP5.
-I archived the repository for the reason that I am no longer working with PHP (we all have to move on sometimes) and have no time to take proper care of it anymore.
-
-Feel free to read the code, to fork it or to use it in whatever way you want.
-
-## Update 25th February 2020
-
-I have merged a PR that includes a security fixe to mitigate zip directory traversal attacks. \
-**This package is still archived and should be swapped out with another package.** \
-However, as long as security fixes will come in I see it as my basic obligation to update this package on demand.
+## Update 21st September 2022
+I forked this project from [Chumper/Zipper](https://github.com/Chumper/Zipper) (Archived) and upgraded the packages to support installing 
+in Laravel 9 (LTS) and PHP 8.1. I also fixed some bugs. I will continue to maintain this package and add new features. 
+If you have any suggestions, please feel free to contact me.
 
 # Zipper
 
@@ -18,13 +10,27 @@ However, as long as security fixes will come in I see it as my basic obligation 
 This is a simple Wrapper around the ZipArchive methods with some handy functions.
 
 ## Installation
+For Laravel 9: 
 
-1. Add this package to the list of required packages, inside `composer.json`
-  * for Laravel 5: `"chumper/zipper": "1.0.x"`
-  * ~~for Laravel 4: `"chumper/zipper": "0.5.x"`~~
-2. Run `composer update`
+1. Add to the repositories' section of your `composer.json` file:
+  ```
+"repositories": [
+        {
+            "type": "vcs",
+            "url": "ssh://git@github.com:22/jaymoh/Zipper.git"
+        }
+    ],
+ ```
 
-3. Go to `app/config/app.php`
+2. Add to the `require` section of your `composer.json` file:
+
+```
+"jaymoh/Zipper": "dev-master"
+```
+
+3. Run `composer update` to install the package.
+
+4. Go to `config/app.php`
 
   * add to providers `Chumper\Zipper\ZipperServiceProvider::class`
   * add to aliases `'Zipper' => Chumper\Zipper\Zipper::class`
