@@ -2,7 +2,6 @@
 I forked this project from [Chumper/Zipper](https://github.com/Chumper/Zipper) (Archived) and upgraded the packages to support installing 
 in Laravel 9 (LTS) and PHP 8.1. I also fixed some bugs. I will continue to maintain this package and add new features. 
 If you have any suggestions, please feel free to contact me.
-
 # Zipper
 
 [![Build Status](https://travis-ci.org/Chumper/Zipper.png)](https://travis-ci.org/Chumper/Zipper)
@@ -17,7 +16,7 @@ For Laravel 9:
 "repositories": [
         {
             "type": "vcs",
-            "url": "ssh://git@github.com:22/jaymoh/Zipper.git"
+            "url": "ssh://git@github.com:22/jaymoh/zipper.git"
         }
     ],
  ```
@@ -25,7 +24,7 @@ For Laravel 9:
 2. Add to the `require` section of your `composer.json` file:
 
 ```
-"jaymoh/Zipper": "dev-master"
+"jaymoh/zipper": "dev-master"
 ```
 
 3. Run `composer update` to install the package.
